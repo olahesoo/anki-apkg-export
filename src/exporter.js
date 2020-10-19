@@ -7,8 +7,8 @@ export default class {
     this.db.run(template);
 
     const now = Date.now();
-    const topDeckId = this._getId('cards', 'did', now);
-    const topModelId = this._getId('notes', 'mid', now);
+    const topDeckId = this._getId('cards', 'did', 1388596687391);
+    const topModelId = this._getId('notes', 'mid', 1435588830424);
 
     this.deckName = deckName;
     this.zip = new Zip();
