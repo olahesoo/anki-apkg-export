@@ -8,7 +8,7 @@ export default class {
 
     const now = Date.now();
     const topDeckId = this._getId('cards', 'did', 1388596687391);
-    const topModelId = this._getId('notes', 'mid', 1435588830424);
+    const topModelId = this._getId('notes', 'mid', now);
 
     this.deckName = deckName;
     this.zip = new Zip();
@@ -26,7 +26,7 @@ export default class {
 
     const models = this._getInitialRowValue('col', 'models');
     const model = getLastItem(models);
-    model.name = this.deckName;
+    model.name = this.deckName + `-${now}`;
     model.did = this.topDeckId;
     model.id = topModelId;
     models[`${topModelId}`] = model;
